@@ -3803,3 +3803,326 @@ Processing by EnemiesController#destroy as HTML
 Filter chain halted as :set_enemy rendered or redirected
 Completed 404 Not Found in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWeapon Create (0.2ms)[0m  [1m[32mINSERT INTO "weapons" ("created_at", "updated_at", "name", "level", "power_base", "power_step") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2020-12-10 16:43:43.184660"], ["updated_at", "2020-12-10 16:43:43.184660"], ["name", "Karlene"], ["level", 78], ["power_base", 2799], ["power_step", 126]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWeapon Create (0.2ms)[0m  [1m[32mINSERT INTO "weapons" ("created_at", "updated_at", "name", "level", "power_base", "power_step") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", "2020-12-10 16:43:43.187630"], ["updated_at", "2020-12-10 16:43:43.187630"], ["name", "Chas"], ["level", 72], ["power_base", 43], ["power_step", 58]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "explicabo"], ["power_base", 1251], ["power_step", 115], ["level", 21], ["kind", 0], ["created_at", "2020-12-10 16:44:22.392264"], ["updated_at", "2020-12-10 16:44:22.392264"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/enemies/1" for 127.0.0.1 at 2020-12-10 13:44:22 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"debitis", "level"=>"87", "power_base"=>"1544", "power_step"=>"155", "kind"=>"dragon", "id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Update (0.1ms)[0m  [1m[33mUPDATE "enemies" SET "name" = ?, "level" = ?, "power_base" = ?, "power_step" = ?, "kind" = ?, "updated_at" = ? WHERE "enemies"."id" = ?[0m  [["name", "debitis"], ["level", 87], ["power_base", 1544], ["power_step", 155], ["kind", 3], ["updated_at", "2020-12-10 16:44:22.412520"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "ut"], ["power_base", 1108], ["power_step", 226], ["level", 64], ["kind", 0], ["created_at", "2020-12-10 16:44:22.417921"], ["updated_at", "2020-12-10 16:44:22.417921"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/enemies/1" for 127.0.0.1 at 2020-12-10 13:44:22 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"eos", "level"=>"64", "power_base"=>"2260", "power_step"=>"274", "kind"=>"demon", "id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Update (0.1ms)[0m  [1m[33mUPDATE "enemies" SET "name" = ?, "power_base" = ?, "power_step" = ?, "kind" = ?, "updated_at" = ? WHERE "enemies"."id" = ?[0m  [["name", "eos"], ["power_base", 2260], ["power_step", 274], ["kind", 2], ["updated_at", "2020-12-10 16:44:22.422904"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.3ms)
+  [1m[36mEnemy Load (0.0ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.6ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "est"], ["power_base", 2315], ["power_step", 297], ["level", 5], ["kind", 2], ["created_at", "2020-12-10 16:44:22.428926"], ["updated_at", "2020-12-10 16:44:22.428926"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/enemies/1" for 127.0.0.1 at 2020-12-10 13:44:22 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"omnis", "level"=>"41", "power_base"=>"1976", "power_step"=>"190", "kind"=>"orc", "id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Update (0.1ms)[0m  [1m[33mUPDATE "enemies" SET "name" = ?, "level" = ?, "power_base" = ?, "power_step" = ?, "kind" = ?, "updated_at" = ? WHERE "enemies"."id" = ?[0m  [["name", "omnis"], ["level", 41], ["power_base", 1976], ["power_step", 190], ["kind", 1], ["updated_at", "2020-12-10 16:44:22.433678"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[36mEnemy Load (0.0ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started PUT "/enemies/0" for 127.0.0.1 at 2020-12-10 13:44:22 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"voluptatibus", "level"=>"55", "power_base"=>"1526", "power_step"=>"176", "kind"=>"demon", "id"=>"0"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started PUT "/enemies/0" for 127.0.0.1 at 2020-12-10 13:44:22 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"aut", "level"=>"73", "power_base"=>"2495", "power_step"=>"194", "kind"=>"orc", "id"=>"0"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "perspiciatis"], ["power_base", 1714], ["power_step", 223], ["level", 12], ["kind", 2], ["created_at", "2020-12-10 16:44:22.449033"], ["updated_at", "2020-12-10 16:44:22.449033"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/enemies/1" for 127.0.0.1 at 2020-12-10 13:44:22 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEnemy Load (0.0ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Destroy (0.1ms)[0m  [1m[31mDELETE FROM "enemies" WHERE "enemies"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "fuga"], ["power_base", 1666], ["power_step", 103], ["level", 45], ["kind", 0], ["created_at", "2020-12-10 16:44:22.455920"], ["updated_at", "2020-12-10 16:44:22.455920"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/enemies/1" for 127.0.0.1 at 2020-12-10 13:44:22 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Destroy (0.8ms)[0m  [1m[31mDELETE FROM "enemies" WHERE "enemies"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.9ms)
+  [1m[36mEnemy Load (0.0ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started DELETE "/enemies/0" for 127.0.0.1 at 2020-12-10 13:44:22 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started DELETE "/enemies/0" for 127.0.0.1 at 2020-12-10 13:44:22 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "id"], ["power_base", 2616], ["power_step", 261], ["level", 28], ["kind", 3], ["created_at", "2020-12-10 16:44:29.267590"], ["updated_at", "2020-12-10 16:44:29.267590"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/enemies/1" for 127.0.0.1 at 2020-12-10 13:44:29 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"eius", "level"=>"84", "power_base"=>"1957", "power_step"=>"142", "kind"=>"dragon", "id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Update (0.1ms)[0m  [1m[33mUPDATE "enemies" SET "name" = ?, "level" = ?, "power_base" = ?, "power_step" = ?, "updated_at" = ? WHERE "enemies"."id" = ?[0m  [["name", "eius"], ["level", 84], ["power_base", 1957], ["power_step", 142], ["updated_at", "2020-12-10 16:44:29.285517"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "vel"], ["power_base", 2282], ["power_step", 196], ["level", 99], ["kind", 2], ["created_at", "2020-12-10 16:44:29.289716"], ["updated_at", "2020-12-10 16:44:29.289716"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/enemies/1" for 127.0.0.1 at 2020-12-10 13:44:29 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"et", "level"=>"66", "power_base"=>"2020", "power_step"=>"144", "kind"=>"dragon", "id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Update (0.1ms)[0m  [1m[33mUPDATE "enemies" SET "name" = ?, "level" = ?, "power_base" = ?, "power_step" = ?, "kind" = ?, "updated_at" = ? WHERE "enemies"."id" = ?[0m  [["name", "et"], ["level", 66], ["power_base", 2020], ["power_step", 144], ["kind", 3], ["updated_at", "2020-12-10 16:44:29.294837"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[36mEnemy Load (0.0ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "voluptates"], ["power_base", 1068], ["power_step", 138], ["level", 1], ["kind", 3], ["created_at", "2020-12-10 16:44:29.300624"], ["updated_at", "2020-12-10 16:44:29.300624"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/enemies/1" for 127.0.0.1 at 2020-12-10 13:44:29 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"mollitia", "level"=>"8", "power_base"=>"2724", "power_step"=>"161", "kind"=>"goblin", "id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Update (0.1ms)[0m  [1m[33mUPDATE "enemies" SET "name" = ?, "level" = ?, "power_base" = ?, "power_step" = ?, "kind" = ?, "updated_at" = ? WHERE "enemies"."id" = ?[0m  [["name", "mollitia"], ["level", 8], ["power_base", 2724], ["power_step", 161], ["kind", 0], ["updated_at", "2020-12-10 16:44:29.305922"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[36mEnemy Load (0.0ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+Started PUT "/enemies/0" for 127.0.0.1 at 2020-12-10 13:44:29 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"tempora", "level"=>"30", "power_base"=>"1995", "power_step"=>"230", "kind"=>"demon", "id"=>"0"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.6ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started PUT "/enemies/0" for 127.0.0.1 at 2020-12-10 13:44:29 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"recusandae", "level"=>"25", "power_base"=>"1378", "power_step"=>"195", "kind"=>"goblin", "id"=>"0"}
+  [1m[36mEnemy Load (0.7ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "neque"], ["power_base", 1130], ["power_step", 143], ["level", 58], ["kind", 2], ["created_at", "2020-12-10 16:44:29.321471"], ["updated_at", "2020-12-10 16:44:29.321471"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/enemies/1" for 127.0.0.1 at 2020-12-10 13:44:29 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEnemy Load (0.0ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Destroy (0.1ms)[0m  [1m[31mDELETE FROM "enemies" WHERE "enemies"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "est"], ["power_base", 1827], ["power_step", 246], ["level", 81], ["kind", 0], ["created_at", "2020-12-10 16:44:29.327725"], ["updated_at", "2020-12-10 16:44:29.327725"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/enemies/1" for 127.0.0.1 at 2020-12-10 13:44:29 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Destroy (0.1ms)[0m  [1m[31mDELETE FROM "enemies" WHERE "enemies"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.2ms)
+  [1m[36mEnemy Load (0.0ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started DELETE "/enemies/0" for 127.0.0.1 at 2020-12-10 13:44:29 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started DELETE "/enemies/0" for 127.0.0.1 at 2020-12-10 13:44:29 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.5ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "sequi"], ["power_base", 2493], ["power_step", 122], ["level", 17], ["kind", 2], ["created_at", "2020-12-10 16:45:06.889445"], ["updated_at", "2020-12-10 16:45:06.889445"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/enemies/1" for 127.0.0.1 at 2020-12-10 13:45:06 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"reprehenderit", "level"=>"8", "power_base"=>"2898", "power_step"=>"127", "kind"=>"demon", "id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Update (0.1ms)[0m  [1m[33mUPDATE "enemies" SET "name" = ?, "level" = ?, "power_base" = ?, "power_step" = ?, "updated_at" = ? WHERE "enemies"."id" = ?[0m  [["name", "reprehenderit"], ["level", 8], ["power_base", 2898], ["power_step", 127], ["updated_at", "2020-12-10 16:45:06.907346"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "provident"], ["power_base", 1688], ["power_step", 283], ["level", 65], ["kind", 2], ["created_at", "2020-12-10 16:45:06.912515"], ["updated_at", "2020-12-10 16:45:06.912515"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/enemies/1" for 127.0.0.1 at 2020-12-10 13:45:06 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"distinctio", "level"=>"27", "power_base"=>"1640", "power_step"=>"252", "kind"=>"demon", "id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Update (0.1ms)[0m  [1m[33mUPDATE "enemies" SET "name" = ?, "level" = ?, "power_base" = ?, "power_step" = ?, "updated_at" = ? WHERE "enemies"."id" = ?[0m  [["name", "distinctio"], ["level", 27], ["power_base", 1640], ["power_step", 252], ["updated_at", "2020-12-10 16:45:06.917726"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[36mEnemy Load (0.0ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "vel"], ["power_base", 1571], ["power_step", 255], ["level", 64], ["kind", 0], ["created_at", "2020-12-10 16:45:06.923493"], ["updated_at", "2020-12-10 16:45:06.923493"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PUT "/enemies/1" for 127.0.0.1 at 2020-12-10 13:45:06 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"sed", "level"=>"56", "power_base"=>"1092", "power_step"=>"106", "kind"=>"dragon", "id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Unpermitted parameter: :id
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Update (0.1ms)[0m  [1m[33mUPDATE "enemies" SET "name" = ?, "level" = ?, "power_base" = ?, "power_step" = ?, "kind" = ?, "updated_at" = ? WHERE "enemies"."id" = ?[0m  [["name", "sed"], ["level", 56], ["power_base", 1092], ["power_step", 106], ["kind", 3], ["updated_at", "2020-12-10 16:45:06.928674"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started PUT "/enemies/0" for 127.0.0.1 at 2020-12-10 13:45:06 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"vitae", "level"=>"10", "power_base"=>"2379", "power_step"=>"287", "kind"=>"goblin", "id"=>"0"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started PUT "/enemies/0" for 127.0.0.1 at 2020-12-10 13:45:06 -0300
+Processing by EnemiesController#update as HTML
+  Parameters: {"name"=>"et", "level"=>"16", "power_base"=>"1045", "power_step"=>"192", "kind"=>"dragon", "id"=>"0"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.2ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "alias"], ["power_base", 1583], ["power_step", 101], ["level", 12], ["kind", 1], ["created_at", "2020-12-10 16:45:06.943692"], ["updated_at", "2020-12-10 16:45:06.943692"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/enemies/1" for 127.0.0.1 at 2020-12-10 13:45:06 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Destroy (0.1ms)[0m  [1m[31mDELETE FROM "enemies" WHERE "enemies"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Create (0.6ms)[0m  [1m[32mINSERT INTO "enemies" ("name", "power_base", "power_step", "level", "kind", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "nihil"], ["power_base", 1319], ["power_step", 282], ["level", 63], ["kind", 1], ["created_at", "2020-12-10 16:45:06.950237"], ["updated_at", "2020-12-10 16:45:06.950237"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started DELETE "/enemies/1" for 127.0.0.1 at 2020-12-10 13:45:06 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEnemy Load (0.0ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mEnemy Destroy (0.1ms)[0m  [1m[31mDELETE FROM "enemies" WHERE "enemies"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 2ms (ActiveRecord: 0.2ms)
+  [1m[36mEnemy Load (0.0ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started DELETE "/enemies/0" for 127.0.0.1 at 2020-12-10 13:45:06 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started DELETE "/enemies/0" for 127.0.0.1 at 2020-12-10 13:45:06 -0300
+Processing by EnemiesController#destroy as HTML
+  Parameters: {"id"=>"0"}
+  [1m[36mEnemy Load (0.1ms)[0m  [1m[34mSELECT  "enemies".* FROM "enemies" WHERE "enemies"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+Filter chain halted as :set_enemy rendered or redirected
+Completed 404 Not Found in 1ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m

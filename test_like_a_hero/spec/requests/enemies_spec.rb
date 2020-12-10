@@ -54,4 +54,43 @@ RSpec.describe "Enemies", type: :request do
       end
     end
   end
+
+  describe 'GET /enemies' do
+    let(:enemy) { create(:enemy) }
+    before(:each) { delete "/enemies/#{enemy.id}" }
+    it 'return status code 200'
+    it 'returns a list of enemies'
+  end
+
+  describe 'POST /enemies' do
+    context 'when it have valid params' do
+      let(:enemy) { create(:enemy) }
+      before(:each) { delete "/enemies/#{enemy.id}" }
+      it 'return status code 200'
+      it 'it changes the count of the database'
+    end
+
+    context 'when it does not have valid params' do
+      let(:enemy) { create(:enemy) }
+      before(:each) { delete "/enemies/#{enemy.id}" }
+      it 'return status code 500'
+      it 'return an error message'
+    end
+  end
+
+  describe 'SHOW /enemies' do
+    context 'when the enemy exists' do
+      let(:enemy) { create(:enemy) }
+      before(:each) { delete "/enemies/#{enemy.id}" }
+      it 'return status code 200'
+      it 'return the enemy'
+    end
+
+    context 'when the enemy does not exists' do
+      let(:enemy) { create(:enemy) }
+      before(:each) { delete "/enemies/#{enemy.id}" }
+      it 'return status code 404'
+      it 'return an error message'
+    end
+  end
 end

@@ -1,5 +1,18 @@
 class EnemiesController < ApplicationController
-  before_action :set_enemy
+  before_action :set_enemy, only: [:show, :update, :destroy]
+
+  def index
+    @enemies = Enemy.all
+  end
+
+  def create
+    @enemy = Enemy.create(enemy_params)
+    redirect_to enemies_path
+  end
+
+  def show
+    @enemy
+  end
 
   def update
     if @enemy.update(enemy_params)
